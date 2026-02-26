@@ -1,0 +1,20 @@
+# Wayfinders Project Notes
+
+## Stack
+- Next.js 14
+- Supabase (to be set up)
+- Vercel (live and connected to GitHub)
+- Cursor
+
+## Status
+- [x] Development environment set up
+- [x] GitHub repository created
+- [x] App running locally on localhost:3000
+- [x] Live on Vercel
+- [ ] Supabase set up
+- [ ] Authentication
+- [ ] Photo feed
+- [ ] User profiles
+
+## Next Session
+Set up Supabase and connect it to the app
