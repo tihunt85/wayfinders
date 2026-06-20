@@ -99,14 +99,21 @@ Per-type on/off preferences stored on profiles.
 
 ### Badge Tables
 
+Both badge types feed a **single unified badge shelf on the creator profile** — they are
+rendered together, not in separate sections. The two types may be visually differentiated
+(distinct shape, colour, or label), but they are highly related elements and the profile
+treats them as one cohesive collection. Any API or UI work fetching badges should query
+both tables and merge the results before rendering.
+
 **`first_waypoint_badges`**
 id, place_id, waypoint_id, creator_id, awarded_at
 One record per Place — awarded automatically on first Waypoint upload at that Place.
+Anchored to a Place. Cannot be reassigned or revoked.
 
 **`creator_badges`** — exceptional badge assignments
 id, creator_id, experience_id, assigned_at, reassigned_at (nullable)
 Allocation count lives on profiles (total_badges_allocated). One active assignment
-record per badge owned. Freely and repeatedly reassignable.
+record per badge owned. Anchored to an Experience. Freely and repeatedly reassignable.
 
 ### Algorithm and Engagement Tables
 
